@@ -56,6 +56,7 @@ void button_interrupt() {
 	pedestrian_crossingIface_raise_button_pushed(&pedestrian_crossing);
 }
 
+// The setup function is called once at startup of the sketch
 void setup() {
 	// set up the pins on arduino
 	pinMode(street_red_pin, OUTPUT);
@@ -82,6 +83,7 @@ void setup() {
 	sei();
 }
 
+// The loop function is called in an endless loop
 void loop() {
 	unsigned long current_millies = millis();
 	if (cycle_count == 0L || (current_millies >= last_cycle_time + CYCLE_PERIOD)) {

@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart pedestrian_crossing {
+
+		feature Outlet {
+			targetProject = "pedestrian_crossing"
+			targetFolder = "src-gen"
+			libraryTargetFolder = "src-gen"
+		}
+	}
+}

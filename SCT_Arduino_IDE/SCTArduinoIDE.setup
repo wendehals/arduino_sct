@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
+    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
+    xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore"
+    name="sct.arduino.ide"
+    label="SCT Arduino IDE">
+  <setupTask
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="org.eclipse.cdt.feature.group"/>
+    <requirement
+        name="org.eclipse.egit.feature.group"/>
+    <requirement
+        name="it.baeyens.arduino.feature.feature.group"/>
+    <requirement
+        name="org.yakindu.sct.feature.group"/>
+    <requirement
+        name="org.yakindu.sct.generator.c.feature.group"/>
+    <requirement
+        name="org.yakindu.sct.generator.cpp.feature.group"/>
+    <repository
+        url="http://updates.yakindu.org/sct/mars/releases"/>
+    <repository
+        url="http://www.baeyens.it/eclipse/V3"/>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      name="eclipse.target.platform"
+      defaultValue="Neon"
+      storageURI="scope://Workspace"/>
+  <setupTask
+      xsi:type="git:GitCloneTask"
+      id="git.clone.arduino_sct"
+      remoteURI="https://github.com/wendehals/arduino_sct.git"
+      pushURI=""
+      checkoutBranch="master">
+    <description>Arduino SCT Git Repository</description>
+  </setupTask>
+  <stream name="master"
+      label="Master">
+    <setupTask
+        xsi:type="projects:ProjectsImportTask">
+      <sourceLocator
+          rootFolder="${git.clone.arduino_sct.location}">
+        <predicate
+            xsi:type="predicates:AndPredicate">
+          <operand
+              xsi:type="predicates:NotPredicate">
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern=".*pedestrian_crossing"/>
+          </operand>
+        </predicate>
+      </sourceLocator>
+    </setupTask>
+  </stream>
+  <logicalProjectContainer
+      xsi:type="setup:ProjectCatalog"
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+  <description>Program an Arduino with YAKINDU Statecharts Tools</description>
+</setup:Project>

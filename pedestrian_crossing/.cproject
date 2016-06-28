@@ -16,7 +16,7 @@
 					<folderInfo id="it.baeyens.arduino.core.toolChain.release.61343510.146278239" name="/" resourcePath="">
 						<toolChain id="it.baeyens.arduino.core.toolChain.release.1489649574" name="Arduino Toolchain" superClass="it.baeyens.arduino.core.toolChain.release">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="it.baeyens.arduino.targetplatform.299845297" name="Arduino Target" osList="all" superClass="it.baeyens.arduino.targetplatform"/>
-							<builder buildPath="${workspace_loc:/traffic_light_2}/Release" id="it.baeyens.arduino.sketch.builder.213792265" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="it.baeyens.arduino.sketch.builder"/>
+							<builder buildPath="${workspace_loc:/pedestrian_crossing}/Release" id="it.baeyens.arduino.sketch.builder.213792265" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="it.baeyens.arduino.sketch.builder"/>
 							<tool id="it.baeyens.arduino.tool.sketch.compiler.cpp.109467474" name="Arduino C++ Compiler" superClass="it.baeyens.arduino.tool.sketch.compiler.cpp">
 								<option id="it.baeyens.arduino.compiler.cpp.sketch.option.incpath.899747526" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.cpp.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pedestrian_crossing/core/core}&quot;"/>

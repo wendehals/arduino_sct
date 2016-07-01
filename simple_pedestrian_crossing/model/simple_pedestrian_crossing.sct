@@ -11,7 +11,7 @@
       <vertices xsi:type="sgraph:State" xmi:id="_8bZtQDSIEeadQYHzHOtb_Q" specification="entry /&#xD;&#xA;red = false;&#xD;&#xA;wait = false;&#xD;&#xA;green = true" name="Green" incomingTransitions="__NJTQD-YEeaGY9__60ZIhg">
         <outgoingTransitions xmi:id="_QiWNYDSJEeadQYHzHOtb_Q" specification="after 20s" target="_VUXpED-ZEeaGY9__60ZIhg"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_6K7WkD-YEeaGY9__60ZIhg" name="Wait" incomingTransitions="_EOSOwDxgEeaR9vylWP2wTw">
+      <vertices xsi:type="sgraph:State" xmi:id="_6K7WkD-YEeaGY9__60ZIhg" name="Green_Request" incomingTransitions="_EOSOwDxgEeaR9vylWP2wTw">
         <outgoingTransitions xmi:id="__NJTQD-YEeaGY9__60ZIhg" specification="after 10s" target="_8bZtQDSIEeadQYHzHOtb_Q"/>
         <regions xmi:id="_6K9y0D-YEeaGY9__60ZIhg" name="Blinking">
           <vertices xsi:type="sgraph:State" xmi:id="_C7QjwD-ZEeaGY9__60ZIhg" specification="entry/&#xD;&#xA;wait = true" name="On" incomingTransitions="_FKUcUD-ZEeaGY9__60ZIhg _H_sG8D-ZEeaGY9__60ZIhg">

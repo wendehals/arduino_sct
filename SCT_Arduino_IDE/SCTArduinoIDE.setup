@@ -69,6 +69,6 @@
   </stream>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
-      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
   <description>Program an Arduino with YAKINDU Statecharts Tools</description>
 </setup:Project>

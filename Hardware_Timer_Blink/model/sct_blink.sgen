@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::cpp {
+
+	statechart sct_blink {
+
+		feature Outlet {
+			targetProject = "Hardware_Timer_Blink"
+			targetFolder = "src-gen"
+			libraryTargetFolder = "src-gen"
+		}
+	}
+}

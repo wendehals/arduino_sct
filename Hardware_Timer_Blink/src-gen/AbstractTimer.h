@@ -30,7 +30,7 @@ public:
 
 	void unsetTimer(TimedStatemachineInterface* timedStatemachine, sc_eventid eventId);
 
-	void runCycle();
+	virtual void runCycle();
 
 	void cancel();
 
